@@ -6,7 +6,7 @@ export default function TopNav() {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-blue-600 shadow-md">
+    <nav className="sticky top-0 z-50 bg-blue-700 shadow-md">
       <div className="flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link
@@ -49,7 +49,7 @@ export default function TopNav() {
 
       {/* Mobile Menu */}
       {burgerOpen && (
-        <div className="sm:hidden bg-blue-500 shadow-md">
+        <div className="sm:hidden bg-cyan-500 shadow-md">
           <Link
             to="/"
             onClick={() => setBurgerOpen(false)}

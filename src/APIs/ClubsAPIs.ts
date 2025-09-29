@@ -30,3 +30,18 @@ export const GetMostActiveClubsAPI= createAsyncThunk(
   
   }
 );
+
+export const GetLatestEventsAPI= createAsyncThunk(
+  'Clubs/GetLatestEvents',
+  async () => {
+    
+    try{
+      const response=await axios.get(`https://localhost:7048/api/clubs/events/upcoming`);    
+      return response.data.data;
+
+  } catch (error: any) {
+  return false;
+  }
+  
+  }
+);

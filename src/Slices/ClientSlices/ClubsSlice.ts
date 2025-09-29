@@ -1,10 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { GetMostActiveClubsAPI, GetNewClubsAPI } from "../../APIs/ClubsAPIs";
-import { IClub, IClubState } from "../../Interfaces/ClubsIntefaces";
+import { GetLatestEventsAPI, GetMostActiveClubsAPI, GetNewClubsAPI } from "../../APIs/ClubsAPIs";
+import { IClub, IClubState, IEvent } from "../../Interfaces/ClubsIntefaces";
 
 const initialState:IClubState={
     NewClubs:null,
-    MostActiveClubs:null
+    MostActiveClubs:null,
+    LatestEvents:null
 }
 const ClubsInfoSlice = createSlice({
   name: 'Clubs',
@@ -18,6 +19,9 @@ const ClubsInfoSlice = createSlice({
          })
        .addCase(GetMostActiveClubsAPI.fulfilled, (state, action: PayloadAction<IClub[]|null|false>) => {
                state.MostActiveClubs=action.payload
+         })   
+       .addCase(GetLatestEventsAPI.fulfilled, (state, action: PayloadAction<IEvent[]|null|false>) => {
+               state.LatestEvents=action.payload
          })   
   },
 });

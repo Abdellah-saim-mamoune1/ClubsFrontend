@@ -1,4 +1,4 @@
-import {Link, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import TopNav from "../ClientPages/MainPages/TopNav";
 import { Home } from "../ClientPages/MainPages/Home";
 import { Contact} from "../ClientPages/MainPages/Contact";
@@ -20,6 +20,7 @@ import { Orders } from "../ClientPages/MainPages/Orders";
 import { SignUp } from "../ClientPages/MainPages/SignUp";
 import { TokenRefresher } from "../ClientPages/MainPages/TokenRefresher";
 import { SearchResults } from "../ClientPages/MainPages/SearchResults";
+import { Club } from "../ClientPages/MainPages/Club";
 export  function ClientContainer(){
       
    
@@ -28,10 +29,11 @@ return (
         <TokenRefresher/>
      <TopNav />
 
-       <div className="flex-1 px-4 h-full overflow-y-auto py-3 md:px-10">
+       <div className="flex-1 h-full overflow-y-auto ">
         <Routes>
           <Route path="*" element={<Navigate to="/" />} /> 
           <Route path="/" element={<Home />} />
+         <Route path="/club/:id" element={<Club />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
@@ -55,16 +57,7 @@ return (
         </Routes>
       </div>
 
-      <footer className="bg-gray-100  border-t border-gray-300  px-6 py-3 text-sm text-gray-600  text-center">
-        © {new Date().getFullYear()} Trezo Books. All rights reserved. |{" "}
-        <Link to="/contact" className="text-blue-600 hover:underline">
-          Contact Us
-        </Link>{" "}
-        |{" "}
-        <Link to="/about" className="text-blue-600  hover:underline">
-          About
-        </Link>
-      </footer>
+     
     </div>
   );
        
