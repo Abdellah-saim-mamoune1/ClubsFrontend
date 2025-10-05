@@ -118,7 +118,7 @@ export default function TopNav() {
               </>
             ) : (
               <Link
-                to="/signin"
+                to="/login"
                 onClick={() => setBurgerOpen(false)}
                 className="block px-6 py-3 text-white font-medium hover:bg-blue-500 transition"
               >
