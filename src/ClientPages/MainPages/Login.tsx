@@ -81,7 +81,7 @@ export function Login() {
               required
               onChange={(e) => setAccount(e.target.value)}
               className="w-full px-3 py-2 border rounded bg-white text-gray-900"
-              placeholder="أدخل المعرف الخاص بك"
+              placeholder="Enter your id"
             />
           </div>
 
@@ -93,7 +93,7 @@ export function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full px-3 py-2 border rounded bg-white text-gray-900"
-              placeholder="أدخل كلمة المرور"
+              placeholder="Enter your password"
             />
           </div>
 
