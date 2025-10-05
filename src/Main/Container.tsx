@@ -1,14 +1,9 @@
-import { useAppSelector } from "../Slices/Hooks";
+
+import { AxiosInterceptor } from "../APIs/AxiosInterceptor";
 import { ClientContainer } from "./ClientContainer";
-import { EmployeeContainer } from "./EmployeeContainer";
+
 
 export function Container() {
-  const userType = useAppSelector(s=>s.EmployeeSlice.UserType);
-
-  
-  if (userType === "Client") {
+     AxiosInterceptor();
     return  <ClientContainer />
-  }
-
-  return <EmployeeContainer/>;
 }

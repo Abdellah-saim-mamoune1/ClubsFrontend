@@ -31,10 +31,21 @@ export interface IRestPassword{
 
 
 export interface IGetClientInfo{
- firstName:string;
- lastName:string;
- phoneNumber:string;
- account:string;
+  id:number;
+  fullName:string;
+  degree:string;
+  age:number;
+  yearOfDegree:string;
+  imageUrl:string;
+  joinedClubs:IJoinedClub[];
+}
+
+interface IJoinedClub{
+  id:number;
+  name:string;
+  userRole:string;
+  type:string;
+  imageUrl:string;
 }
 
 export interface IAddOrder{
