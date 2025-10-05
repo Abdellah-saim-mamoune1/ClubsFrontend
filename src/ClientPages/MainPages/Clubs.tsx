@@ -23,7 +23,6 @@ export function Clubs() {
   const [clubs, setClubs] = useState<IClub[]>([]);
   const [pageNumber, setPageNumber] = useState(1);
   const [pageSize] = useState(12);
-  const [totalClubs, setTotalClubs] = useState(0);
 
   const [initialLoading, setInitialLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -50,7 +49,7 @@ export function Clubs() {
             );
 
             const total = res.totalCount ?? 0;
-            setTotalClubs(total);
+         
             setHasMore(pageNumber * pageSize < total);
           }
         } else {

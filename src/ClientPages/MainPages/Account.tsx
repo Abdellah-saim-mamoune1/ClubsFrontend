@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { data, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../Slices/Hooks";
 import { GraduationCap, Calendar, Users, Camera, X } from "lucide-react";
 import { Footer } from "../../Components/Footer";

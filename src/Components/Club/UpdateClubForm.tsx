@@ -81,7 +81,7 @@ export function UpdateClubForm(
          const fileExt = file.name.split(".").pop();
          const fileName = `club_${updatedClub.clubId}_${Date.now()}.${fileExt}`;
      
-         const {data, error } = await supabase.storage
+         const { error } = await supabase.storage
            .from("EventsProjectImages") // bucket name
            .upload(fileName, file, { cacheControl: "3600", upsert: true });
      

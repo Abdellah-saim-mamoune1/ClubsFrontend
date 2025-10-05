@@ -10,7 +10,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { EventCard } from "../../Components/EventCard.tsx";
 import { Footer } from "../../Components/Footer.tsx";
 import MainHomeImage from "../../public/Images/MainHomeImage.jpg"
-import { IClub } from "../../Interfaces/ClubsIntefaces.ts";
+
 export function Home() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();

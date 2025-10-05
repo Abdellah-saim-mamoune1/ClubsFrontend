@@ -25,7 +25,7 @@ export function JoinClubForm({
   const [form, setForm] = useState<IClubJoiningRequest>({
     Email: "",
     Motivation: "",
-    StudentId:5,
+    StudentId:userId,
     ClubId:clubId
   });
 

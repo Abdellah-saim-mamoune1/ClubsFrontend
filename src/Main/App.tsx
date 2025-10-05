@@ -4,7 +4,7 @@ import {  BrowserRouter as Router } from 'react-router-dom';
 import store from "../Slices/Store";
 import {Container} from "./Container";
 import { Provider } from "react-redux";
-import { AxiosInterceptor } from "../APIs/AxiosInterceptor";
+
 function App() {
 
   return(

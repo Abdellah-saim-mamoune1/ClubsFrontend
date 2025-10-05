@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { GraduationCap, Calendar, Users, User } from "lucide-react";
+import { GraduationCap, Calendar, Users } from "lucide-react";
 import {  GetStudentDataByIdAsync } from "../../APIs/ClientAPIs";
 import {  IGetClientInfo } from "../../Interfaces/ClientInterfaces";
 import { useEffect, useState } from "react";

@@ -12,7 +12,7 @@ export function ApplicationsRequests({ ClubId }: { ClubId: number }) {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [applications, setApplications] = useState<IClubApplicationRequest[] | null>(null);
-  const [totalCount, setTotalCount] = useState(0);
+ 
   const [expanded, setExpanded] = useState<number | null>(null); // track expanded motivation
   const PageNumber = 1;
   const PageSize = 10;
@@ -28,7 +28,7 @@ export function ApplicationsRequests({ ClubId }: { ClubId: number }) {
     const result = await GetApplicationsRequestsAPI(ClubId, PageNumber, PageSize);
     if (result !== false) {
       setApplications(result.applications);
-      setTotalCount(result.totalCount);
+ 
     }
     setLoading(false);
   }
