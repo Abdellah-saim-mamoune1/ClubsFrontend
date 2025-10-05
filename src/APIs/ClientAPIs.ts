@@ -5,7 +5,7 @@ import api from "./API";
 export async function GetStudentDataByIdAsync(id:number){
 
   try{
-      const response=await api.get(`user/by-id/${id}`);
+      const response=await api.get(`user/by-id/${id}`,{ withCredentials:true});
        return response.data.data;
   }catch{
     return false;
@@ -16,6 +16,7 @@ export async function UpdateStudentImageAPIAsync(ImageUrl:string){
 
   try{
       await api.put(`user/image/`,{ImageUrl},{
+         withCredentials:true,
          headers: {
        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
   },
@@ -51,6 +52,7 @@ export async function IsStudentLoggedInAPI(){
     
     try{
      await api.post(`authentication/is-logged-in`,{},{
+      withCredentials:true,
       headers: {
        Authorization: `Bearer ${localStorage.getItem("authToken")}`,
   },
