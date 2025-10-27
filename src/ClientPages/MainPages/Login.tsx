@@ -26,7 +26,7 @@ export function Login() {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://uni-clubs-bgg3hjfdcrghawag.spaincentral-01.azurewebsites.net/api/authentication/login", {
+      const response = await axios.post("https://clubsservice-d6e7hccybzcdhefm.spaincentral-01.azurewebsites.net/api/authentication/login", {
         username: account,
         password: password,
       });
